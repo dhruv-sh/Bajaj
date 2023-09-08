@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 const port = 8081; // Change this to the desired port number
-const baseurl = "/bhfl";
+const baseurl = "/bfhl";
 app.use(bodyParser.json());
 
 //GET METHOD
@@ -17,7 +17,7 @@ app.get(`${baseurl}`, (req, res) => {
   res.status(200).json(response);
 });
 
-app.post(`${baseurl}/data`, (req, res) => {
+app.post(`${baseurl}`, (req, res) => {
   const inputData = req.body.data;
   const numbers = [];
   const alphabets = [];
@@ -52,9 +52,9 @@ app.post(`${baseurl}/data`, (req, res) => {
 
   const response = {
     is_success: true,
-    user_id: "Dhruv_Sharma_2001",
-    email: "ds0809@srmist.edu.in",
-    roll_number: "RA2011033010173",
+    user_id: "Vansh_Kumar_tandon_14052002",
+    email: "vt4662@srmist.edu.in",
+    roll_number: "RA2011033010171",
     numbers: numbers,
     alphabets: alphabets,
     highest_alphabet: highestAlphabet ? [highestAlphabet] : [],
